@@ -16,7 +16,7 @@ Friends added to specified Last.fm profile.
 || ioError || Dispatched when there is a problem connecting to the web service (IOErrorEvent.IO_ERROR ||
 || complete || Dispatched when the data has been loaded. (Event.COMPLETE) ||
 || *Properties* (read-only) || *Summary* ||
-|| username || Username for the profile being queried ||
+|| username (String) || Username for the profile being queried ||
 || friends (Array) || Array of users that are friends on specified profile ||
 
 
@@ -46,4 +46,3 @@ function serviceLoaded(evt:Event):void {
     }
 }
 }}}
-
