@@ -1,5 +1,5 @@
 #summary Using the TopArtistsData class of the UserData package.
-#labels userdata,topartists
+#labels userdata,topartists,Phase-Implementation
 
 = TopArtistsData Summary =
 
@@ -53,5 +53,4 @@ function serviceLoaded(evt:Event):void {
     }
 }
 }}}
-
 
