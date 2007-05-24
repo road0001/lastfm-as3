@@ -15,6 +15,7 @@ Retrieves the 50 most played albums from a Last.fm music profile.
 || load || Fetches data from web service ||
 || *Events* || *Summary* ||
 || complete|| Dispatched when the data has been loaded (Event.COMPLETE) ||
+|| ioError || Dispatched when there is a problem connecting to the web service (IOErrorEvent.IO_ERROR) ||
 || *Properties* (read-only) || *Summary* ||
 || username (String) || Username for the profile being queried ||
 || albums (Array) || Array of top albums ||
@@ -57,5 +58,4 @@ function serviceLoaded(evt:Event):void {
     }
 }
 }}}
-
 
