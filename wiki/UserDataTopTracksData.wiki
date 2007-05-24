@@ -1,0 +1,58 @@
+#summary TopTracksData class reference from the UserData package.
+#labels userdata,toptracks,Phase-Implementation
+
+= TopTracksData Summary =
+
+Retrieves the 50 most played tracks from a Last.fm music profile.
+
+
+== Details ==
+
+|| *Constructor Arguments* || *Summary* ||
+|| Username || (required) Last.fm username to retrieve the profile data for. ||
+|| Type || (optional) accepts "3month", "6month", or "12month" for different chart results. Default is "overall" ||
+|| *Methods* || *Summary* ||
+|| load || Fetches data from web service ||
+|| *Events* || *Summary* ||
+|| complete|| Dispatched when the data has been loaded. (Event.COMPLETE) ||
+|| *Properties* (read-only) || *Summary* ||
+|| username || Username for the profile being queried ||
+|| tracks|| Array of msot played tracks ||
+|| type || Chart type returned (overall, 3month, 6month, 12month) ||
+
+== Track object structure ==
+
+|| *Properties* || *Summary* ||
+|| artist || Name and Musicbrainz ID of the artist (artist.name, artist.mbid) ||
+|| name || Track name ||
+|| mbid || Musicbrainz.org ID of the track ||
+|| rank || Album rank on the users chart ||
+|| playcount || Number of times user has played this artist ||
+|| url || URL to the artists Last.fm profile page ||
+
+
+== Example Usage ==
+
+{{{
+import com.lfm.core.services.UserData.TopTracksData;
+import flash.events.Event;
+
+var trackdata:TopTracksData= new TopTracksData("RJ");
+trackdata.addEventListener("complete",serviceLoaded);
+trackdata.load();
+
+function serviceLoaded(evt:Event):void {
+    for(var i:Number = 0; i < trackdata.tracks.length; i++) {
+        trace(i+". Album Name:" + trackdata.tracks[i].name);
+        trace(" Track Artist:" + trackdata.tracks[i].artist.name);
+        trace(" Track Artist Musicbrainz ID:" + trackdata.tracks[i].artist.mbid);
+        trace(" Musicbrainz ID:" + trackdata.tracks[i].mbid);
+        trace(" Rank:" + trackdata.tracks[i].rank);
+        trace(" Playcount:" + trackdata.tracks[i].playcount);
+        trace(" URL:" + trackdata.tracks[i].url);
+    }
+}
+}}}
+
+
+
