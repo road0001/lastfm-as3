@@ -17,18 +17,18 @@ Retrieves the 50 most played tracks from a Last.fm music profile.
 || complete|| Dispatched when the data has been loaded. (Event.COMPLETE) ||
 || *Properties* (read-only) || *Summary* ||
 || username || Username for the profile being queried ||
-|| tracks|| Array of msot played tracks ||
-|| type || Chart type returned (overall, 3month, 6month, 12month) ||
+|| tracks (Array) || Array of msot played tracks ||
+|| type (String) || Chart type returned (overall, 3month, 6month, 12month) ||
 
 == Track object structure ==
 
 || *Properties* || *Summary* ||
-|| artist || Name and Musicbrainz ID of the artist (artist.name, artist.mbid) ||
-|| name || Track name ||
-|| mbid || Musicbrainz.org ID of the track ||
-|| rank || Album rank on the users chart ||
-|| playcount || Number of times user has played this artist ||
-|| url || URL to the artists Last.fm profile page ||
+|| artist (Object) || Name and Musicbrainz ID of the artist (artist.name, artist.mbid) ||
+|| name (String) || Track name ||
+|| mbid (String) || Musicbrainz.org ID of the track ||
+|| rank (Number) || Album rank on the users chart ||
+|| playcount (Number) || Number of times user has played this artist ||
+|| url (String) || URL to the artists Last.fm profile page ||
 
 
 == Example Usage ==
@@ -53,6 +53,5 @@ function serviceLoaded(evt:Event):void {
     }
 }
 }}}
-
 
 
