@@ -14,6 +14,7 @@ Retrieves the data from the Last.fm Profile Information web services for a speci
 || load || Fetches data from web service ||
 || *Events* || *Summary* ||
 || complete|| Dispatched when the data has been loaded (Event.COMPLETE) ||
+|| ioError || Dispatched when there is a problem connecting to the web service (IOErrorEvent.IO_ERROR) ||
 || *Properties* (read-only) || *Summary* ||
 || id (Number) || ID of user profile ||
 || cluster (String) || Cluster of user profile on Last.fm ||
@@ -52,7 +53,6 @@ function serviceLoaded(evt:Event):void {
     trace("Profile Avatar: " + profile.avatar);
 }
 }}}
-
 
 
 
