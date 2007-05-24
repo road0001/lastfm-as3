@@ -13,7 +13,7 @@ Friends added to specified Last.fm profile.
 || *Methods* || *Summary* ||
 || load || Fetches data from web service ||
 || *Events* || *Summary* ||
-|| ioError || Dispatched when there is a problem connecting to the web service (IOErrorEvent.IO_ERROR ||
+|| ioError || Dispatched when there is a problem connecting to the web service (IOErrorEvent.IO_ERROR) ||
 || complete || Dispatched when the data has been loaded. (Event.COMPLETE) ||
 || *Properties* (read-only) || *Summary* ||
 || username (String) || Username for the profile being queried ||
