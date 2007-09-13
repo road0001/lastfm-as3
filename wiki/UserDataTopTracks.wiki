@@ -1,5 +1,5 @@
 #summary TopTracks class reference from the UserData package.
-#labels Phase-Implementation,userdata,toptracks
+#labels Phase-Implementation,userdata,TopTracks
 
 *Package*      com.lfm.services.UserData 
 
@@ -61,5 +61,4 @@ function serviceLoaded(evt:Event):void {
     }
 }
 }}}
-
 
