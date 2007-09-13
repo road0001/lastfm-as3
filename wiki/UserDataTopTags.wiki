@@ -6,10 +6,10 @@
 
 *Class*        public class TopTags
 
-*Inheritance*  AbstractService --> AbstractUserData --> TopTags
+*Inheritance*  AbstractService --> AbstractUserData --> !TopTags
 
 
-= TopTags Summary =
+= !TopTags Summary =
 
 Retrieves the data from the Last.fm Profile Information web services for a specific user.
 
