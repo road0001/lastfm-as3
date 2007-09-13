@@ -18,7 +18,7 @@ Retrieves a Last.fm users top tags for an album. When the data is loaded, an arr
 
 || *Constructor Arguments* || *Summary* ||
 || Username || (required) Last.fm username to retrieve the profile data for. ||
-|| Artist || (required) Artist to lookup tags for. ||
+|| Album || (required) Album to lookup tags for. ||
 || *Methods* || *Summary* ||
 || load || Fetches data from web service ||
 || *Events* || *Summary* ||
