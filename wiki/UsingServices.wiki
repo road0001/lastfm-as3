@@ -28,10 +28,9 @@ function friendsHandler(event:Event) {
 
 function tagsHandler(event:Event) {
     //Top tag for first friend.
-    trace("Top tag for " + tagsData.username + ": tagsData.tags[0]['name']);
+    trace("Top tag for " + tagsData.username + ": " + tagsData.tags[0]['name']);
 }
 
 }}}
 
 Simple as creating the object and telling it to load!
-
