@@ -18,7 +18,7 @@
 == Details ==
 
 || *Constructor Arguments* || *Summary* ||
-|| Username || (required) Last.fm username to retrieve the profile data for. ||
+|| Username || (required) Last.fm username/profile to submit tracks to. ||
 || Password || (required) Password for the specified user. ||
 || *Methods* || *Summary* ||
 || submit || Method accepts a single Track object to submit. ||
@@ -56,4 +56,3 @@ function scrobbleHandler(event:Event) {
     trace("Track scrobbled!");
 }
 }}}
-
