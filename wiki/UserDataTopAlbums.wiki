@@ -1,4 +1,4 @@
-#summary TopAlbums class reference from the UserData package.
+#summary Retrieves the 50 most played albums from a Last.fm profile.
 #labels userdata,Phase-Implementation,topalbums
 
 *Package*      com.lfm.services.UserData 
@@ -65,5 +65,4 @@ function serviceLoaded(event:Event):void {
     }
 }
 }}}
-
 
