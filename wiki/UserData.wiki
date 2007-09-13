@@ -1,4 +1,4 @@
-#labels Phase-Implementation,userdata
+#labels Phase-Implementation,userdata,package
 #Actionscript 3.0 package that contains all available services for retrieving information about a Last.fm user.
 
 = UserData Package =
@@ -25,5 +25,4 @@ var profileInfo:Profile= new Profile("RJ");
 var friendsList:Friends = new Friends("RJ");
 
 }}}
-
 
