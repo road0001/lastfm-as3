@@ -11,7 +11,7 @@
 
 = !TopArtistTags Summary =
 
-Retrieves a Last.fm users top tags for an artist.
+Retrieves a Last.fm users top tags for an artist. When the data is loaded, an array of tag objects can be referenced in the "tags" property of the class.
 
 
 == Details ==
