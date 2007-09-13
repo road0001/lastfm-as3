@@ -17,7 +17,7 @@ Retrieves a Last.fm users list of recently banned tracks from a users profile. W
 == Details ==
 
 || *Constructor Arguments* || *Summary* ||
-|| Username || (required) Last.fm username to retrieve the neighbour data for. ||
+|| Username || (required) Last.fm username to retrieve the data for. ||
 || *Methods* || *Summary* ||
 || load || Fetches data from web service ||
 || *Events* || *Summary* ||
