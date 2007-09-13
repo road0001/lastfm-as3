@@ -3,12 +3,12 @@
 
 *Package*      com.lfm.services.UserData 
 
-*Class*        public class TopAlbums
+*Class*        public class !TopAlbums
 
-*Inheritance*  AbstractService --> AbstractUserData --> TopAlbums
+*Inheritance*  AbstractService --> AbstractUserData --> !TopAlbums
 
 
-= TopAlbums Summary =
+= !TopAlbums Summary =
 
 Retrieves the 50 most played albums from a Last.fm music profile.
 
@@ -65,4 +65,3 @@ function serviceLoaded(event:Event):void {
     }
 }
 }}}
-
