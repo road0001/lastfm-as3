@@ -1,7 +1,7 @@
-#summary Using the TopArtistsData class of the UserData package.
+#summary Using the TopArtists class of the UserData package.
 #labels userdata,topartists,Phase-Implementation
 
-= TopArtistsData Summary =
+= TopArtists Summary =
 
 Retrieves the 50 most played artists from a Last.fm music profile.
 
