@@ -1,7 +1,7 @@
-#summary FriendsData class reference from the UserData package.
+#summary Friends class reference from the UserData package.
 #labels Phase-Implementation,userdata,friends
 
-= FriendsData Summary =
+= Friends Summary =
 
 Friends added to specified Last.fm profile.
 
@@ -23,7 +23,7 @@ Friends added to specified Last.fm profile.
 == Friend object structure ==
 
 || *Properties* || *Summary* ||
-|| name (String) || Track name ||
+|| name (String) || Friend username ||
 || url (String) || URL to friends profile ||
 || image (String) || URL to friends avatar image ||
 
@@ -31,10 +31,10 @@ Friends added to specified Last.fm profile.
 == Example Usage ==
 
 {{{
-import com.lfm.core.services.UserData.FriendsData;
+import com.lfm.services.UserData.Friends;
 import flash.events.Event;
 
-var friendsdata:FriendsData = new FriendsData("RJ");
+var friendsdata:Friends = new Friends("RJ");
 friendsdata.addEventListener("complete",serviceLoaded);
 friendsdata.load();
 
