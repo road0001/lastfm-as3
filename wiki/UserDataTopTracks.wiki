@@ -1,4 +1,4 @@
-#summary Retrieves the 50 most played tracks from a Last.fm music profile.
+#summary Retrieves the 50 most played tracks from a Last.fm profile.
 #labels Phase-Implementation,userdata,TopTracks
 
 *Package*      com.lfm.services.UserData 
