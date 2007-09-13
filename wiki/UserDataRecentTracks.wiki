@@ -36,7 +36,7 @@ Retrieves a Last.fm users list of recently played tracks. When the data is loade
 || artist (Object) || artist.name, artist.mbid (Musicbrainz ID) ||
 || url (String) || URL of the track page ||
 || album (Object) || album.name, album.mbid (Musicbrainz ID) ||
-|| date (Date) || Release date ||
+|| date (Date) || Date the track was scrobbled ||
 
 
 == Example Usage ==
