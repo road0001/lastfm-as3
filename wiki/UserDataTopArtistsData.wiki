@@ -1,6 +1,13 @@
 #summary Using the TopArtists class of the UserData package.
 #labels userdata,topartists,Phase-Implementation
 
+*Package*      com.lfm.services.UserData 
+
+*Class*        public class TopAlbums
+
+*Inheritance*  AbstractService --> AbstractUserData --> TopArtists
+
+
 = TopArtists Summary =
 
 Retrieves the 50 most played artists from a Last.fm music profile.
@@ -35,14 +42,14 @@ Retrieves the 50 most played artists from a Last.fm music profile.
 == Example Usage ==
 
 {{{
-import com.lfm.core.services.UserData.TopArtistsData;
+import com.lfm.services.UserData.TopArtists;
 import flash.events.Event;
 
-var artistdata:TopArtistsData = new TopArtistsData("RJ");
+var artistdata:TopArtists = new TopArtists("RJ");
 artistdata.addEventListener("complete",serviceLoaded);
 artistdata.load();
 
-function serviceLoaded(evt:Event):void {
+function serviceLoaded(event:Event):void {
     for(var i:Number = 0; i < artistdata.artists.length; i++) {
         trace(i+". Artist Name:" + artistdata.artists[i].name);
         trace(" Musicbrainz ID:" + artistdata.artists[i].mbid);
