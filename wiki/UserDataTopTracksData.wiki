@@ -1,7 +1,14 @@
-#summary TopTracksData class reference from the UserData package.
+#summary TopTracks class reference from the UserData package.
 #labels userdata,toptracks,Phase-Implementation
 
-= TopTracksData Summary =
+*Package*      com.lfm.services.UserData 
+
+*Class*        public class TopTracks
+
+*Inheritance*  AbstractService --> AbstractUserData --> TopTracks
+
+
+= TopTracks Summary =
 
 Retrieves the 50 most played tracks from a Last.fm music profile.
 
@@ -18,7 +25,7 @@ Retrieves the 50 most played tracks from a Last.fm music profile.
 || ioError || Dispatched when there is a problem connecting to the web service (IOErrorEvent.IO_ERROR) ||
 || *Properties* (read-only) || *Summary* ||
 || username || Username for the profile being queried ||
-|| tracks (Array) || Array of msot played tracks ||
+|| tracks (Array) || Array of most played tracks ||
 || type (String) || Chart type returned (overall, 3month, 6month, 12month) ||
 
 == Track object structure ==
@@ -35,10 +42,10 @@ Retrieves the 50 most played tracks from a Last.fm music profile.
 == Example Usage ==
 
 {{{
-import com.lfm.core.services.UserData.TopTracksData;
+import com.lfm.services.UserData.TopTracksData;
 import flash.events.Event;
 
-var trackdata:TopTracksData= new TopTracksData("RJ");
+var trackdata:TopTracks = new TopTracks("RJ");
 trackdata.addEventListener("complete",serviceLoaded);
 trackdata.load();
 
