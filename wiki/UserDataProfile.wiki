@@ -1,4 +1,4 @@
-#summary Using the Profile class of the UserData package.
+#summary Retrieves the data from the Last.fm Profile Information web services for a specific user.
 #labels Phase-Implementation,userdata,profile
 
 
@@ -61,7 +61,6 @@ function serviceLoaded(evt:Event):void {
     trace("Profile Avatar: " + profile.avatar);
 }
 }}}
-
 
 
 
