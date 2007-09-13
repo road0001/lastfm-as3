@@ -26,8 +26,8 @@ Retrieves a Last.fm users top tags for an album. When the data is loaded, an arr
 || ioError || Dispatched when there is a problem connecting to the web service (IOErrorEvent.IO_ERROR) ||
 || *Properties* (read-only) || *Summary* ||
 || username (String) || Username for the profile being queried ||
-|| artist (String) || Artist being referenced for tags. ||
-|| tags (Array) || Array of users top tags. ||
+|| album (String) || Album being referenced for tags. ||
+|| tags (Array) || Array of users tags for the album. ||
 
 == Tag object structure ==
 
