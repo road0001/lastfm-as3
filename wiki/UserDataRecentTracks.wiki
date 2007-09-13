@@ -4,12 +4,12 @@
 
 *Package*      com.lfm.services.UserData 
 
-*Class*        public class RecentTracks
+*Class*        public class !RecentTracks
 
-*Inheritance*  AbstractService --> AbstractUserData --> RecentTracks
+*Inheritance*  AbstractService --> AbstractUserData --> !RecentTracks
 
 
-= RecentTracks Summary =
+= !RecentTracks Summary =
 
 Retrieves a Last.fm users list of recently played tracks. When the data is loaded, an array of track objects can be referenced in the "tracks" property of the class.
 
@@ -61,5 +61,4 @@ function serviceLoaded(event:Event):void {
     }
 }
 }}}
-
 
