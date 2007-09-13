@@ -3,12 +3,12 @@
 
 *Package*      com.lfm.services.UserData 
 
-*Class*        public class TopTracks
+*Class*        public class !TopTracks
 
-*Inheritance*  AbstractService --> AbstractUserData --> TopTracks
+*Inheritance*  AbstractService --> AbstractUserData --> !TopTracks
 
 
-= TopTracks Summary =
+= !TopTracks Summary =
 
 Retrieves the 50 most played tracks from a Last.fm music profile.
 
