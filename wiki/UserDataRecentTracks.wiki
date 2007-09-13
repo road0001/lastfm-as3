@@ -11,7 +11,7 @@
 
 = !RecentTracks Summary =
 
-Retrieves a Last.fm users list of recently played tracks. When the data is loaded, an array of track objects can be referenced in the "tracks" property of the class.
+[UserDataRecentTracks Retrieves] a Last.fm users list of recently played tracks. When the data is loaded, an array of track objects can be referenced in the "tracks" property of the class.
 
 
 == Details ==
