@@ -1,4 +1,4 @@
-#summary Friends list from a specified Last.fm profile.
+#summary Retrieves a Last.fm users list of friends.
 #labels Phase-Implementation,userdata,friends
 
 = Friends Summary =
