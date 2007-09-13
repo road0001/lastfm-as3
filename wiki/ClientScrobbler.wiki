@@ -1,0 +1,62 @@
+#summary Scrobbler class to submit tracks to a Last.fm profile
+#labels Phase-Implementation,client,scrobbler
+
+*Package*      com.lfm.client
+
+*Class*        public class Scrobbler
+
+*Inheritance*  Scrobbler
+
+*Dependency*  com.lfm.client.Session, com.lfm.model.Track
+
+
+= Scrobbler Summary =
+
+"Scrobbles" tracks to a specified Last.fm profile using the [http://www.audioscrobbler.net/development/protocol/ 1.2 submission protocol]
+
+
+== Details ==
+
+|| *Constructor Arguments* || *Summary* ||
+|| Username || (required) Last.fm username to retrieve the profile data for. ||
+|| Password || (required) Password for the specified user. ||
+|| *Methods* || *Summary* ||
+|| submit || Method accepts a single Track object to submit. ||
+|| submitNowPlaying || Method accepts a single Track object to submit for real-time information (not yet tested) ||
+|| *Events* || *Summary* ||
+|| complete|| Dispatched when a a track submission is complete (Event.COMPLETE) ||
+|| connect|| Dispatched when a session has been established and ready to scrobble (Event.CONNECT) ||
+|| *Properties* (read-only) || *Summary* ||
+|| ready (Boolean) || If a proper session has been established, ready will return true ||
+
+
+== Example Usage ==
+
+{{{
+import com.lfm.client.Scrobbler;
+import com.lfm.model.Track;
+
+var scrobbler:Scrobbler = new Scrobbler("Username","Password");
+scrobbler.addEventListener("connect",scrobblerReady);
+scrobbler.addEventListener("complete",scrobbleHandler);
+
+var track:Track = new Track();
+track.artist = "The Decemberists";
+track.title = "Here I Dreamt I Was an Architect";
+track.album = "Castaways and Cutouts";
+track.length = 269;
+track.source = Track.SOURCE_USER;
+track.timestamp = Track.dateToTimestamp(new Date());
+
+function scrobblerReady(event:Event) {
+    scrobbler.submit(track);
+}
+
+function scrobbleHandler(event:Event) {
+    trace("Track scrobbled!");
+}
+}}}
+
+
+
+
