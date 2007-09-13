@@ -11,7 +11,7 @@
 
 = Session Summary =
 
-Before submitting tracks to a profile or using many other services like streaming a station, a session must be established with the Last.fm servers. This class takes care of establishing that session. The [http://code.google.com/p/lastfm-as3/wiki/ClientScrobbler Scrobbler class] uses this class to be able to submit tracks.
+Before submitting tracks to a profile or using many other services like streaming a station, a session must be established with the Last.fm servers. This class takes care of establishing that session. The [http://code.google.com/p/lastfm-as3/wiki/ClientScrobbler Scrobbler class] uses this class to be able to submit tracks. *A session is not needed for using the web services in this library, only scrobbling.*
 
 
 
@@ -50,7 +50,6 @@ function sessionHandler(event:Event) {
 }
 
 }}}
-
 
 
 
