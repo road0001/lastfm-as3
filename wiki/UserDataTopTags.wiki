@@ -4,7 +4,7 @@
 
 *Package*      com.lfm.services.UserData 
 
-*Class*        public class TopTags
+*Class*        public class !TopTags
 
 *Inheritance*  AbstractService --> AbstractUserData --> !TopTags
 
