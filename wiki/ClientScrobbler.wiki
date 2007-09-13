@@ -1,5 +1,5 @@
 #summary Scrobbler class to submit tracks to a Last.fm profile
-#labels Phase-Implementation,client,scrobbler
+#labels Phase-Implementation,client,scrobbler,Featured
 
 *Package*      com.lfm.client
 
@@ -56,5 +56,4 @@ function scrobbleHandler(event:Event) {
     trace("Track scrobbled!");
 }
 }}}
-
 
