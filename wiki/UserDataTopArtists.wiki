@@ -1,4 +1,4 @@
-#summary Using the TopArtists class of the UserData package.
+#summary Retrieves the 50 most played artists from a Last.fm profile.
 #labels Phase-Implementation,userdata,topartists
 
 *Package*      com.lfm.services.UserData 
