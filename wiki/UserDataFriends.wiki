@@ -3,7 +3,7 @@
 
 = Friends Summary =
 
-Friends list from a specified Last.fm profile.
+Retrieves a Last.fm users list of friends. When the data is loaded, an array of friend objects can be referenced in the "friends" property of the class.
 
 
 == Details ==
@@ -35,7 +35,7 @@ import com.lfm.services.UserData.Friends;
 import flash.events.Event;
 
 var friendsdata:Friends = new Friends("RJ");
-friendsdata.addEventListener("complete",serviceLoaded);
+friendsdata.addEventListener(Event.COMPLETE, serviceLoaded);
 friendsdata.load();
 
 function serviceLoaded(evt:Event):void {
