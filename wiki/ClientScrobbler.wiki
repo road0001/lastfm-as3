@@ -25,7 +25,7 @@
 || submitNowPlaying || Method accepts a single Track object to submit for real-time information (not yet tested) ||
 || *Events* || *Summary* ||
 || complete|| Dispatched when a a track submission is complete (Event.COMPLETE) ||
-|| connect|| Dispatched when a session has been established and ready to scrobble (Event.CONNECT) ||
+|| connect|| Dispatched when a [http://code.google.com/p/lastfm-as3/wiki/ClientSession session] has been established and ready to scrobble (Event.CONNECT) ||
 || *Properties* (read-only) || *Summary* ||
 || ready (Boolean) || If a proper session has been established, ready will return true ||
 
@@ -56,6 +56,5 @@ function scrobbleHandler(event:Event) {
     trace("Track scrobbled!");
 }
 }}}
-
 
 
