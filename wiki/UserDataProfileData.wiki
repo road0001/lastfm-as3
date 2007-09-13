@@ -1,7 +1,11 @@
-#summary Using the ProfileData class of the UserData package.
+#summary Using the Profile class of the UserData package.
 #labels Phase-Implementation,userdata,profile
 
-= ProfileData Summary =
+*Package*  com.lfm.services.UserData 
+*Class* public class Profile 
+*Inheritance* AbstractService --> AbstractUserData --> Profile
+
+= Profile Summary =
 
 Retrieves the data from the Last.fm Profile Information web services for a specific user.
 
@@ -32,10 +36,10 @@ Retrieves the data from the Last.fm Profile Information web services for a speci
 == Example Usage ==
 
 {{{
-import com.lfm.core.services.UserData.ProfileData;
+import com.lfm.services.UserData.Profile;
 import flash.events.Event;
 
-var profile:ProfileData = new ProfileData ("RJ");
+var profile:Profile = new Profile("RJ");
 profile.addEventListener("complete",serviceLoaded);
 profile.load();
 
