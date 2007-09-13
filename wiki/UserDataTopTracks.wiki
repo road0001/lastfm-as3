@@ -1,4 +1,4 @@
-#summary TopTracks class reference from the UserData package.
+#summary Retrieves the 50 most played tracks from a Last.fm music profile.
 #labels Phase-Implementation,userdata,TopTracks
 
 *Package*      com.lfm.services.UserData 
@@ -61,4 +61,3 @@ function serviceLoaded(evt:Event):void {
     }
 }
 }}}
-
