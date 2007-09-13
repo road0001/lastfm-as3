@@ -11,7 +11,7 @@
 
 = !TopTags Summary =
 
-Retrieves the data from the Last.fm Profile Information web services for a specific user.
+Retrieves a Last.fm users top tags. When the data is loaded, an array of tag objects can be referenced in the "tags" property of the class.
 
 
 == Details ==
