@@ -1,7 +1,14 @@
 #summary TopAlbumsData class reference from the UserData package.
 #labels userdata,Phase-Implementation,topalbums
 
-= TopAlbumsData Summary =
+*Package*      com.lfm.services.UserData 
+
+*Class*        public class TopAlbums
+
+*Inheritance*  AbstractService --> AbstractUserData --> TopAlbums
+
+
+= TopAlbums Summary =
 
 Retrieves the 50 most played albums from a Last.fm music profile.
 
@@ -36,14 +43,14 @@ Retrieves the 50 most played albums from a Last.fm music profile.
 == Example Usage ==
 
 {{{
-import com.lfm.core.services.UserData.TopAlbumsData;
+import com.lfm.services.UserData.TopAlbums;
 import flash.events.Event;
 
-var albumdata:TopAlbumsData= new TopAlbumsData("RJ");
+var albumdata:TopAlbums = new TopAlbums("RJ");
 albumdata.addEventListener("complete",serviceLoaded);
 albumdata.load();
 
-function serviceLoaded(evt:Event):void {
+function serviceLoaded(event:Event):void {
     for(var i:Number = 0; i < albumdata.albums.length; i++) {
         trace(i+". Album Name:" + albumdata.albums[i].name);
         trace(" Album Artist:" + albumdata.albums[i].artist.name);
