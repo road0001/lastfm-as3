@@ -37,8 +37,8 @@ import com.lfm.client.Scrobbler;
 import com.lfm.model.Track;
 
 var scrobbler:Scrobbler = new Scrobbler("Username","Password");
-scrobbler.addEventListener("connect",scrobblerReady);
-scrobbler.addEventListener("complete",scrobbleHandler);
+scrobbler.addEventListener(Event.CONNECT,scrobblerReady);
+scrobbler.addEventListener(Event.COMPLETE,scrobbleHandler);
 
 var track:Track = new Track();
 track.artist = "The Decemberists";
