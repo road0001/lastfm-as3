@@ -7,7 +7,7 @@
 
 *Inheritance*  Scrobbler
 
-*Dependency*  com.lfm.client.Session, com.lfm.model.Track
+*Dependency*  [http://code.google.com/p/lastfm-as3/wiki/ClientSession com.lfm.client.Session], com.lfm.model.Track
 
 
 = Scrobbler Summary =
@@ -56,7 +56,6 @@ function scrobbleHandler(event:Event) {
     trace("Track scrobbled!");
 }
 }}}
-
 
 
 
