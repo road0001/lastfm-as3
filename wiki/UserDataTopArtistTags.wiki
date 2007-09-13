@@ -1,5 +1,5 @@
 #summary Retrieves a Last.fm users top tags for an artist.
-#labels Phase-Implementation,toptags,userdata
+#labels Phase-Implementation,toptags,userdata,Featured
 
 
 *Package*      com.lfm.services.UserData 
