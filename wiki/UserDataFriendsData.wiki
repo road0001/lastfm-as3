@@ -1,9 +1,9 @@
-#summary Friends class reference from the UserData package.
+#summary Friends list from a specified Last.fm profile.
 #labels Phase-Implementation,userdata,friends
 
 = Friends Summary =
 
-Friends added to specified Last.fm profile.
+Friends list from a specified Last.fm profile.
 
 
 == Details ==
