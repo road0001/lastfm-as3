@@ -46,18 +46,19 @@ import com.lfm.services.UserData.TopTracks;
 import flash.events.Event;
 
 var trackdata:TopTracks = new TopTracks("RJ");
-trackdata.addEventListener("complete",serviceLoaded);
+trackdata.addEventListener(Event.COMPLETE,serviceLoaded);
 trackdata.load();
 
 function serviceLoaded(evt:Event):void {
     for(var i:Number = 0; i < trackdata.tracks.length; i++) {
-        trace(i+". Album Name:" + trackdata.tracks[i].name);
-        trace(" Track Artist:" + trackdata.tracks[i].artist.name);
-        trace(" Track Artist Musicbrainz ID:" + trackdata.tracks[i].artist.mbid);
-        trace(" Musicbrainz ID:" + trackdata.tracks[i].mbid);
-        trace(" Rank:" + trackdata.tracks[i].rank);
-        trace(" Playcount:" + trackdata.tracks[i].playcount);
-        trace(" URL:" + trackdata.tracks[i].url);
+        trace(i+". Album Name:" + trackdata.tracks[i]['name']);
+        trace(" Track Artist:" + trackdata.tracks[i]['artist']['name']);
+        trace(" Track Artist Musicbrainz ID:" + trackdata.tracks[i]['artist']['mbid']);
+        trace(" Musicbrainz ID:" + trackdata.tracks[i]['mbid']);
+        trace(" Rank:" + trackdata.tracks[i]['rank']);
+        trace(" Playcount:" + trackdata.tracks[i]['playcount']);
+        trace(" URL:" + trackdata.tracks[i]['url']);
     }
 }
 }}}
+ 
