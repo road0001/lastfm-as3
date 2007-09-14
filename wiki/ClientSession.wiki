@@ -26,6 +26,7 @@ Before submitting tracks to a profile or using many other services like streamin
 || *Events* || *Summary* ||
 || complete || Dispatched when a session handshake is complete (Event.COMPLETE) ||
 || ioError|| Dispatched when there is a problem contacting the server (IOErrorEvent.IO_ERROR) ||
+|| error || Dispatched when there is a problem establishing as session (Possibly bad username/pass). Use text property for more info (ErrorEvent.Error) ||
 || *Properties* (read-only) || *Summary* ||
 || success (Boolean) || If a proper session has been established, this will return true ||
 || status (String) || The status code returned from the server after a handshake. ||
@@ -53,3 +54,4 @@ function sessionHandler(event:Event) {
 
 
 
+ 
