@@ -3,12 +3,12 @@
 
 *Package*      com.lfm.services.UserData 
 
-*Class*        public class TopAlbums
+*Class*        public class !TopArtists
 
-*Inheritance*  AbstractService --> AbstractUserData --> TopArtists
+*Inheritance*  AbstractService --> AbstractUserData --> !TopArtists
 
 
-= TopArtists Summary =
+= !TopArtists Summary =
 
 Retrieves the 50 most played artists from a Last.fm music profile.
 
@@ -51,13 +51,14 @@ artistdata.load();
 
 function serviceLoaded(event:Event):void {
     for(var i:Number = 0; i < artistdata.artists.length; i++) {
-        trace(i+". Artist Name:" + artistdata.artists[i].name);
-        trace(" Musicbrainz ID:" + artistdata.artists[i].mbid);
-        trace(" Rank:" + artistdata.artists[i].rank);
-        trace(" Playcount:" + artistdata.artists[i].playcount);
-        trace(" URL:" + artistdata.artists[i].url);
-        trace(" Thumbnail:" + artistdata.artists[i].thumbnail);
-        trace(" Image:" + artistdata.artists[i].image);
+        trace(i+". Artist Name:" + artistdata.artists[i]['name']);
+        trace(" Musicbrainz ID:" + artistdata.artists[i]['mbid']);
+        trace(" Rank:" + artistdata.artists[i]['rank']);
+        trace(" Playcount:" + artistdata.artists[i]['playcount']);
+        trace(" URL:" + artistdata.artists[i]['url']);
+        trace(" Thumbnail:" + artistdata.artists[i]['thumbnail']);
+        trace(" Image:" + artistdata.artists[i]['image']);
     }
 }
 }}}
+ 
