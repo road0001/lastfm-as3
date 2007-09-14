@@ -33,7 +33,7 @@ Retrieves manually recommended events for a Last.fm user. When the data is loade
 == Recommendation object structure ==
 
 || *Properties* || *Summary* ||
-|| title (String) || Title of the recommendation ||
+|| name (String) || Name of the recommendation ||
 || link (String) || URL to the recommended item ||
 || description (String) || Description or message to go with the recommendation ||
 
@@ -50,12 +50,13 @@ recdata.load();
 
 function serviceLoaded(event:Event):void {
     for(var i:Number = 0; i < recdata.recommendations.length; i++) {
-        trace(i+". Recommendation Title: " + recdata.recommendations[i]['title']);
+        trace(i+". Recommendation Name: " + recdata.recommendations[i]['name']);
         trace(" Recommendation URL:" + recdata.recommendations[i]['url']);
-        trace(" Recommendation Description:" + recommendations.recommendations[i]['description']);
+        trace(" Recommendation Description:" + recdata.recommendations[i]['description']);
     }
 }
 }}}
+ 
  
  
  
