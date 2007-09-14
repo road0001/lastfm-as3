@@ -31,12 +31,6 @@ Retrieves Taste-O-Meter scores for two users.
 || score (Number) || Number rating of musical compatibility ||
 
 
-== Common Artist object structure ==
-
-|| *Properties* || *Summary* ||
-|| name (String) || Artist name ||
-
-
 == Example Usage ==
 
 {{{
@@ -52,6 +46,7 @@ function serviceLoaded(event:Event):void {
     trace("Common artists: "+tastedata.commonArtists.join(", "));
 }
 }}}
+ 
  
  
  
