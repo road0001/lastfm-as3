@@ -44,10 +44,10 @@ import com.lfm.services.UserData.Profile;
 import flash.events.Event;
 
 var profile:Profile = new Profile("RJ");
-profile.addEventListener("complete",serviceLoaded);
+profile.addEventListener(Event.COMPLETE,serviceLoaded);
 profile.load();
 
-function serviceLoaded(evt:Event):void {
+function serviceLoaded(event:Event):void {
     trace("Profile ID: " + profile.id);
     trace("Profile cluster: " + profile.cluster);
     trace("Profile username: " + profile.username);
@@ -68,3 +68,4 @@ function serviceLoaded(evt:Event):void {
 
 
 
+ 
