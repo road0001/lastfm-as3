@@ -4,12 +4,12 @@
 
 *Package*      com.lfm.services.UserData 
 
-*Class*        public class !TasteOMeter
+*Class*        public class TasteOMeter
 
-*Inheritance*  AbstractService --> AbstractUserData --> !TasteOMeter
+*Inheritance*  AbstractService --> AbstractUserData --> TasteOMeter
 
 
-= !TasteOMeter Summary =
+= TasteOMeter Summary =
 
 Retrieves Taste-O-Meter scores for two users.
 
@@ -46,6 +46,7 @@ function serviceLoaded(event:Event):void {
     trace("Common artists: "+tastedata.commonArtists.join(", "));
 }
 }}}
+ 
  
  
  
