@@ -11,7 +11,7 @@
 
 = !WeeklyChartList Summary =
 
-Retrieves all available weekly charts available for a user. The list is a list of time spans in unix timestamp format. You could then use this "from" and "to" time spans with [UserDataWeeklyAlbumsChart Weekly Albums Chart], [UserDataWeeklyArtistsChart Weekly Artist Charts], and Weekly Track Charts to get detailed chart data for specified time spans.
+Retrieves all available weekly charts available for a user. The list is a list of time spans in unix timestamp format. You could then use this "from" and "to" time spans with [UserDataWeeklyAlbumsChart Weekly Albums Chart], [UserDataWeeklyArtistsChart Weekly Artist Charts], and [UserDataWeeklyTracksChart Weekly Tracks Chart] to get detailed chart data for specified time spans.
 
 
 == Details ==
