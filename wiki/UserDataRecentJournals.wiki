@@ -45,7 +45,7 @@ Retrieves a Last.fm users recently journal entries. When the data is loaded, an 
 import com.lfm.services.UserData.RecentJournals;
 import flash.events.Event;
 
-var recenttracksdata:RecentJournals = new RecentJournals("RJ");
+var recentjournaldata:RecentJournals = new RecentJournals("RJ");
 recentjournaldata.addEventListener(Event.COMPLETE, serviceLoaded);
 recentjournaldata.load();
 
@@ -54,7 +54,8 @@ function serviceLoaded(event:Event):void {
         trace(i+". Journal Title: " + recentjournaldata.journals[i]['title']);
         trace(" Journal URL:" + recentjournaldata.journals[i]['link']);
         trace(" Journal Publish Date:" + recentjournaldata.journals[i]['pubDate']);;
-        trace(" Journal Content:" recentjournaldata.journals[i]['content']);
+        trace(" Journal Content:" + recentjournaldata.journals[i]['content']);
     }
 }
 }}}
+ 
