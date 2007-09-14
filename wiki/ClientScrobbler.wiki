@@ -24,8 +24,10 @@
 || submit || Method accepts a single Track object to submit. ||
 || submitNowPlaying || Method accepts a single Track object to submit for real-time information (not yet tested) ||
 || *Events* || *Summary* ||
-|| complete|| Dispatched when a a track submission is complete (Event.COMPLETE) ||
-|| connect|| Dispatched when a [http://code.google.com/p/lastfm-as3/wiki/ClientSession session] has been established and ready to scrobble (Event.CONNECT) ||
+|| complete || Dispatched when a a track submission is complete (Event.COMPLETE) ||
+|| connect || Dispatched when a [http://code.google.com/p/lastfm-as3/wiki/ClientSession session] has been established and ready to scrobble (Event.CONNECT) ||
+|| init || Dispatched when a track submission has started (Event.INIT) ||
+|| ioError || Dispatched when a session could not be established or a submission failure.  Use the text property for details. (IOErrorEvent.IO_ERROR) ||
 || *Properties* (read-only) || *Summary* ||
 || ready (Boolean) || If a proper session has been established, ready will return true ||
 
@@ -56,3 +58,4 @@ function scrobbleHandler(event:Event) {
     trace("Track scrobbled!");
 }
 }}}
+ 
