@@ -49,13 +49,14 @@ recdata.addEventListener(Event.COMPLETE, serviceLoaded);
 recdata.load();
 
 function serviceLoaded(event:Event):void {
-    for(var i:Number = 0; i < recdata.journals.length; i++) {
+    for(var i:Number = 0; i < recdata.recommendations.length; i++) {
         trace(i+". Recommendation Title: " + recdata.recommendations[i]['title']);
         trace(" Recommendation URL:" + recdata.recommendations[i]['url']);
         trace(" Recommendation Description:" + recommendations.recommendations[i]['description']);
     }
 }
 }}}
+ 
  
  
  
