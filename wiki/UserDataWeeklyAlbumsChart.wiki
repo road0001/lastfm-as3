@@ -29,7 +29,7 @@ Retrieves most recent or specified date range of a users album charts. Passing o
 || username (String) || Username for the profile being queried ||
 || from (Number) || Start date in unix timestamp format. ||
 || to (Number) || End date in unix timestamp format. ||
-|| album (Array) || Array of albums in the chart ||
+|| albums (Array) || Array of albums in the chart ||
 
 
 == Album object structure ==
@@ -65,5 +65,4 @@ function serviceLoaded(event:Event):void {
     }
 }
 }}}
-
 
