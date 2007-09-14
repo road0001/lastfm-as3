@@ -38,10 +38,10 @@ Retrieves all available weekly charts available for a user. The list is a list o
 == Example Usage ==
 
 {{{
-import com.lfm.services.UserData.WeeklyChartData;
+import com.lfm.services.UserData.WeeklyChartList;
 import flash.events.Event;
 
-var chartdata:WeeklyChartData = new WeeklyChartData("RJ");
+var chartdata:WeeklyChartList = new WeeklyChartList("RJ");
 chartdata.addEventListener(Event.COMPLETE, serviceLoaded);
 chartdata.load();
 
@@ -52,3 +52,4 @@ function serviceLoaded(event:Event):void {
     }
 }
 }}}
+ 
