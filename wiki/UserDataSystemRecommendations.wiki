@@ -4,12 +4,12 @@
 
 *Package*      com.lfm.services.UserData 
 
-*Class*        public class !ManualRecommendations
+*Class*        public class !SystemRecommendations 
 
-*Inheritance*  AbstractService --> AbstractUserData --> !ManualRecommendations
+*Inheritance*  AbstractService --> AbstractUserData --> !SystemRecommendations 
 
 
-= !ManualRecommendations Summary =
+= !SystemRecommendations Summary =
 
 Retrieves system recommended events for a Last.fm user. When the data is loaded, an array of recommendation objects can be referenced in the "recommendations" property of the class.
 
@@ -60,5 +60,6 @@ function serviceLoaded(event:Event):void {
  
  
 
+ 
  
  
