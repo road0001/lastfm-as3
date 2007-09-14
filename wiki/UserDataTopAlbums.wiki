@@ -47,21 +47,22 @@ import com.lfm.services.UserData.TopAlbums;
 import flash.events.Event;
 
 var albumdata:TopAlbums = new TopAlbums("RJ");
-albumdata.addEventListener("complete",serviceLoaded);
+albumdata.addEventListener(Event.COMPLETE,serviceLoaded);
 albumdata.load();
 
 function serviceLoaded(event:Event):void {
     for(var i:Number = 0; i < albumdata.albums.length; i++) {
-        trace(i+". Album Name:" + albumdata.albums[i].name);
-        trace(" Album Artist:" + albumdata.albums[i].artist.name);
-        trace(" Album Artist Musicbrainz ID:" + albumdata.albums[i].artist.mbid);
-        trace(" Musicbrainz ID:" + albumdata.albums[i].mbid);
-        trace(" Rank:" + albumdata.albums[i].rank);
-        trace(" Playcount:" + albumdata.albums[i].playcount);
-        trace(" URL:" + albumdata.albums[i].url);
-        trace(" Image Large:" + albumdata.albums[i].image.large);
-        trace(" Image Medium:" + albumdata.albums[i].image.medium);
-        trace(" Image Small:" + albumdata.albums[i].image.small);
+        trace(i+". Album Name:" + albumdata.albums[i]['name']);
+        trace(" Album Artist:" + albumdata.albums[i]['artist']['name']);
+        trace(" Album Artist Musicbrainz ID:" + albumdata.albums[i]['artist']['mbid']);
+        trace(" Musicbrainz ID:" + albumdata.albums[i]['mbid']);
+        trace(" Rank:" + albumdata.albums[i]['rank']);
+        trace(" Playcount:" + albumdata.albums[i]['playcount']);
+        trace(" URL:" + albumdata.albums[i]['url']);
+        trace(" Image Large:" + albumdata.albums[i]['image']['large']);
+        trace(" Image Medium:" + albumdata.albums[i]['image']['medium']);
+        trace(" Image Small:" + albumdata.albums[i]['image']['small']);
     }
 }
 }}}
+ 
