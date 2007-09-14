@@ -54,7 +54,7 @@ chartdata.addEventListener(Event.COMPLETE, serviceLoaded);
 chartdata.load();
 
 function serviceLoaded(event:Event):void {
-    for(var i:Number = 0; i < chartdata.albums.length; i++) {
+    for(var i:Number = 0; i < chartdata.tracks.length; i++) {
         trace(i+". Track name: " + chartdata.tracks[i]['name']);
         trace(" Track artist: " + chartdata.tracks[i]['artist']['name']);
         trace(" Track artist MBID: " + chartdata.tracks[i]['artist']['mbid']);
@@ -67,3 +67,4 @@ function serviceLoaded(event:Event):void {
 }}}
 
 
+ 
