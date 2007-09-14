@@ -40,9 +40,10 @@ friendsdata.load();
 
 function serviceLoaded(evt:Event):void {
     for(var i:Number = 0; i < friendsdata.friends.length; i++) {
-        trace(i+". Friend Name:" + friendsdata.friends[i].name);
-        trace(" Friends URL:" + friendsdata.friends[i].url);
-        trace(" Friend Image:" + friendsdata.friends[i].image);
+        trace(i+". Friend Name:" + friendsdata.friends[i]['name']);
+        trace(" Friends URL:" + friendsdata.friends[i]['url']);
+        trace(" Friend Image:" + friendsdata.friends[i]['image']);
     }
 }
 }}}
+ 
