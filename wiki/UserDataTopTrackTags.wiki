@@ -41,19 +41,20 @@ Retrieves a Last.fm users top tags for a track. When the data is loaded, an arra
 == Example Usage ==
 
 {{{
-import com.lfm.services.UserData.TopTrackTags;
+import com.lfm.services.UserData.TopAlbumTags;
 import flash.events.Event;
 
-var tagdata:TopTrackTags = new TopTrackTags("RJ","Metallica","Nothing Else Matters");
+var tagdata:TopAlbumTags = new TopAlbumTags("RJ","Metallica","Ride the Lightning");
 tagdata.addEventListener(Event.COMPLETE, serviceLoaded);
 tagdata.load();
 
 function serviceLoaded(event:Event):void {
-    for(var i:Number = 0; i < tagdata['tags'].length; i++) {
-        trace(i+". Tag Name:" + tagdata['tags'][i].name);
-        trace(" Tag Count:" + tagdata['tags'][i].count);
-        trace(" Tag URL:" + tagdata['tags'][i].url);
+    for(var i:Number = 0; i < tagdata.tags.length; i++) {
+        trace(i+". Tag Name:" + tagdata.tags[i]['name']);
+        trace(" Tag Count:" + tagdata.tags[i]['count']);
+        trace(" Tag URL:" + tagdata.tags[i]['url']);
     }
 }
 }}}
+ 
  
