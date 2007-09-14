@@ -18,6 +18,7 @@ Retrieves a Last.fm users top tags for a track. When the data is loaded, an arra
 
 || *Constructor Arguments* || *Summary* ||
 || Username || (required) Last.fm username to retrieve the profile data for. ||
+|| Artist || (required) Track artist. ||
 || Track || (required) Track name to lookup tags for. ||
 || *Methods* || *Summary* ||
 || load || Fetches data from web service ||
@@ -43,7 +44,7 @@ Retrieves a Last.fm users top tags for a track. When the data is loaded, an arra
 import com.lfm.services.UserData.TopTrackTags;
 import flash.events.Event;
 
-var tagdata:TopTrackTags = new TopTrackTags("RJ");
+var tagdata:TopTrackTags = new TopTrackTags("RJ","Metallica","Nothing Else Matters");
 tagdata.addEventListener(Event.COMPLETE, serviceLoaded);
 tagdata.load();
 
@@ -55,3 +56,4 @@ function serviceLoaded(event:Event):void {
     }
 }
 }}}
+ 
