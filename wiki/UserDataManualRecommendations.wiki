@@ -52,9 +52,10 @@ function serviceLoaded(event:Event):void {
     for(var i:Number = 0; i < recdata.journals.length; i++) {
         trace(i+". Recommendation Title: " + recdata.recommendations[i]['title']);
         trace(" Recommendation URL:" + recdata.recommendations[i]['url']);
-        trace(" Recommendation Description:" + recommendations.journals[i]['description']);
+        trace(" Recommendation Description:" + recommendations.recommendations[i]['description']);
     }
 }
 }}}
+ 
  
  
