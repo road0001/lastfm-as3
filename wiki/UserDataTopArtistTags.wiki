@@ -43,15 +43,16 @@ Retrieves a Last.fm users top tags for an artist. When the data is loaded, an ar
 import com.lfm.services.UserData.TopArtistTags;
 import flash.events.Event;
 
-var tagdata:TopArtistTags = new TopArtistTags("RJ");
+var tagdata:TopArtistTags = new TopArtistTags("RJ","Metallica");
 tagdata.addEventListener(Event.COMPLETE, serviceLoaded);
 tagdata.load();
 
 function serviceLoaded(event:Event):void {
-    for(var i:Number = 0; i < tagdata['tags'].length; i++) {
-        trace(i+". Tag Name:" + tagdata['tags'][i].name);
-        trace(" Tag Count:" + tagdata['tags'][i].count);
-        trace(" Tag URL:" + tagdata['tags'][i].url);
+    for(var i:Number = 0; i < tagdata.tags.length; i++) {
+        trace(i+". Tag Name:" + tagdata.tags[i]['name']);
+        trace(" Tag Count:" + tagdata.tags[i]['count']);
+        trace(" Tag URL:" + tagdata.tags[i]['url']);
     }
 }
 }}}
+ 
