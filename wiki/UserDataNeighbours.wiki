@@ -48,10 +48,11 @@ neighboursdata.load();
 
 function serviceLoaded(event:Event):void {
     for(var i:Number = 0; i < neighboursdata.friends.length; i++) {
-        trace(i+". Neighbour Name:" + neighboursdata['neighbours'][i].name);
-        trace(" Neighbour URL:" + neighboursdata['neighbours'][i].url);
-        trace(" Neighbour Image:" + neighboursdata['neighbours'][i].image);
-        trace(" Neighbour Match:" + neighboursdata['neighbours'][i].match);
+        trace(i+". Neighbour Name:" + neighboursdata['neighbours'][i]['name']);
+        trace(" Neighbour URL:" + neighboursdata['neighbours'][i]['url']);
+        trace(" Neighbour Image:" + neighboursdata['neighbours'][i]['image']);
+        trace(" Neighbour Match:" + neighboursdata['neighbours'][i]['match']);
     }
 }
 }}}
+ 
