@@ -52,7 +52,7 @@ function serviceLoaded(event:Event):void {
     for(var i:Number = 0; i < recdata.recommendations.length; i++) {
         trace(i+". Recommendation Name: " + recdata.recommendations[i]['name']);
         trace(" Recommendation URL:" + recdata.recommendations[i]['url']);
-        trace(" Recommendation MBID:" + recommendations.recommendations[i]['mbid']);
+        trace(" Recommendation MBID:" + recdata.recommendations[i]['mbid']);
     }
 }
 }}}
@@ -60,6 +60,7 @@ function serviceLoaded(event:Event):void {
  
  
 
+ 
  
  
  
