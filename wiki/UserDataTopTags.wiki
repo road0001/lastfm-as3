@@ -46,10 +46,11 @@ tagdata.addEventListener(Event.COMPLETE, serviceLoaded);
 tagdata.load();
 
 function serviceLoaded(event:Event):void {
-    for(var i:Number = 0; i < tagdata['tags'].length; i++) {
-        trace(i+". Tag Name:" + tagdata['tags'][i].name);
-        trace(" Tag Count:" + tagdata['tags'][i].count);
-        trace(" Tag URL:" + tagdata['tags'][i].url);
+    for(var i:Number = 0; i < tagdata.tags.length; i++) {
+        trace(i+". Tag Name:" + tagdata.tags[i]['name']);
+        trace(" Tag Count:" + tagdata.tags[i]['count']);
+        trace(" Tag URL:" + tagdata.tags[i]['url']);
     }
 }
 }}}
+ 
