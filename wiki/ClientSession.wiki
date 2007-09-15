@@ -38,31 +38,16 @@ Before submitting tracks to a profile or using many other services like streamin
 
 == Events ==
 *ioError (IOErroEvent.IO_ERROR)* - When the url (http://post.ausioscrobbler.com) cannot be reached (server downtime, etc), this error is dispatched. 
+
 *status (StatusEvent.STATUS)* - When the server is successfully reached, it returns a status code. This status code is parsed and dispatched through this event. You can read the status code and status level through the "code" and "level" properties of the event. Possible status code/level's:
 
-Code: *OK*
-Level: *status*
-Meaning: A successful session has been established with no errors.
-
-Code: *BANNED*
-Level: *error*
-Meaning: A session could not be established. The client id has been banned.
-
-Code: *FAILED*
-Level: *error*
-Meaning: A session could not be established.
-
-Code: *BADAUTH*
-Level: *error*
-Meaning: A session could not be established due to a wrong password or a non-existent username.
-
-Code: *BADTIME*
-Level: *error*
-Meaning: A session could not be established due to a bad timestamp being used to establish the session.
-
-Code: *UNKNOWN*
-Level: *error*
-Meaning: A session could not be established for an unknown reason.
+|| *Code* || *Level* || *Meaning* ||
+|| OK || status || A successful session has been established with no errors. ||
+|| BANNED || error|| A session could not be established. The client id has been banned. ||
+|| FAILED || error|| A session could not be established. ||
+|| BADAUTH || error|| A session could not be established. ||
+|| BADTIME || error|| A session could not be established due to a bad timestamp being used to establish the session. ||
+|| UNKNOWN || error|| A session could not be established for an unknown reason. ||
 
 
 == Example Usage ==
@@ -90,6 +75,11 @@ function handshakeError(event:IOErrorEvent) {
 
 
 
+ 
+ 
+ 
+ 
+ 
  
  
  
