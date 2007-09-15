@@ -24,9 +24,8 @@ Before submitting tracks to a profile or using many other services like streamin
 || *Methods* || *Summary* ||
 || create || Starts the session handshake process ||
 || *Events* || *Summary* ||
-|| complete || Dispatched when a session handshake is complete (Event.COMPLETE) ||
+|| status || Dispatched when a session handshake is complete (StatusEvent.STATUS) ||
 || ioError|| Dispatched when there is a problem contacting the server (IOErrorEvent.IO_ERROR) ||
-|| error || Dispatched when there is a problem establishing as session (Possibly bad username/pass). Use text property for more info (ErrorEvent.Error) ||
 || *Properties* (read-only) || *Summary* ||
 || success (Boolean) || If a proper session has been established, this will return true ||
 || status (String) || The status code returned from the server after a handshake. ||
@@ -36,22 +35,61 @@ Before submitting tracks to a profile or using many other services like streamin
 || npURL (String) || The URL to post real-time now playing submissions to. ||
 || timestamp (Number) || The timestamp that was used to generate an authentication string ||
 
+
+== Events ==
+*ioError (IOErroEvent.IO_ERROR)* - When the url (http://post.ausioscrobbler.com) cannot be reached (server downtime, etc), this error is dispatched. 
+*status (StatusEvent.STATUS)* - When the server is successfully reached, it returns a status code. This status code is parsed and dispatched through this event. You can read the status code and status level through the "code" and "level" properties of the event. Possible status code/level's:
+
+Code: *OK*
+Level: *status*
+Meaning: A successful session has been established with no errors.
+
+Code: *BANNED*
+Level: *error*
+Meaning: A session could not be established. The client id has been banned.
+
+Code: *FAILED*
+Level: *error*
+Meaning: A session could not be established.
+
+Code: *BADAUTH*
+Level: *error*
+Meaning: A session could not be established due to a wrong password or a non-existent username.
+
+Code: *BADTIME*
+Level: *error*
+Meaning: A session could not be established due to a bad timestamp being used to establish the session.
+
+Code: *UNKNOWN*
+Level: *error*
+Meaning: A session could not be established for an unknown reason.
+
+
 == Example Usage ==
 
 {{{
 import com.lfm.client.Session;
 
 var lfmSession:Session = new Session("Username","Password");
-lfmSession.addEventListener(Event.COMPLETE,sessionHandler);
+lfmSession.addEventListener(IOErrorEvent.IO_ERROR, handshakeError);
+lfmSession.addEventListener(StatusEvent.STATUS, statusHandler);
 lfmSession.create();
 
-function sessionHandler(event:Event) {
-    trace("Session established: "+lfmSession.success);
+function statusHandler(event:StatusEvent) {
+    trace("Session status: "+event.code);
+    trace("Session status level: "+event.level);
+    trace("Session Success: "+lfmSession.success);
     trace("Session id: "+lfmSession.id);
+}
+
+function handshakeError(event:IOErrorEvent) {
+   trace("Error connecting to the web service");
 }
 
 }}}
 
 
 
+ 
+ 
  
