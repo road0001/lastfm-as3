@@ -43,6 +43,7 @@ import com.lfm.model.Track;
 var scrobbler:Scrobbler = new Scrobbler("Username","Password");
 scrobbler.addEventListener(Event.CONNECT,scrobblerReady);
 scrobbler.addEventListener(Event.COMPLETE,scrobbleHandler);
+scrobbler.connect();
 
 var track:Track = new Track();
 track.artist = "The Decemberists";
@@ -60,6 +61,7 @@ function scrobbleHandler(event:Event) {
     trace("Track scrobbled!");
 }
 }}}
+ 
  
  
  
