@@ -21,6 +21,7 @@
 || Username || (required) Last.fm username/profile to submit tracks to. ||
 || Password || (required) Password for the specified user. ||
 || *Methods* || *Summary* ||
+|| connect || Establishes a session with the last.fm web service ||
 || submit || Method accepts a single Track object to submit. ||
 || submitNowPlaying || Method accepts a single Track object to submit for real-time information (not yet tested) ||
 || *Events* || *Summary* ||
@@ -59,5 +60,6 @@ function scrobbleHandler(event:Event) {
     trace("Track scrobbled!");
 }
 }}}
+ 
  
  
