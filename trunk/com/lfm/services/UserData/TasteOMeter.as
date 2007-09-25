@@ -16,11 +16,9 @@
 		
 		override protected function parseData(event:Event):void {
 			super.parseData(event);
-			trace(_svcXML);
 			_properties['score'] = _svcXML.score;
 			for each (var item:XML in _svcXML..commonArtists.artist) {
-				var artist:Object = { 'name':item.name };
-				_properties['commonArtists'].push(artist);
+				_properties['commonArtists'].push(item.name);
 			}
 			dispatchEvent(new Event(Event.COMPLETE));
 		}
