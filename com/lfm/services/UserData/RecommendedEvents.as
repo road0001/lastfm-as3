@@ -1,7 +1,7 @@
-﻿package com.lfm.services.UserData {
+package com.lfm.services.UserData {
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
-	import com.lfm.services.UserData.AbstractEventsData;
+	import com.lfm.services.AbstractEventsData;
 	
 	public class RecommendedEvents extends AbstractEventsData {
 		
