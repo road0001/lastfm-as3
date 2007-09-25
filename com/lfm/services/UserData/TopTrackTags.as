@@ -16,7 +16,6 @@
 		
 		
 		override protected function parseData(event:Event):void {
-			
 			super.parseData(event);
 			_properties['track'] = _svcXML.@track.toString();
 			_properties['artist'] = _svcXML.@artist.toString();
