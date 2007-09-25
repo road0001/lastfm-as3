@@ -44,7 +44,6 @@
 				dtend.setTime(Date.parse(dtParse[1]+"/"+dtParse[2]+"/"+dtParse[3]+" "+dtParse[4]+":"+dtParse[5]+":"+dtParse[6]+" UTC"));
 				calEvent.end = dtend;
 				
-				
 				pattern = new RegExp("(.*) at (.*) on","i");
 				var infoBreakdown:Array = pattern.exec(calEvent.name);
 				if(infoBreakdown) {
@@ -60,7 +59,7 @@
 				
 			}
 
-			dispatchEvent(new Event("complete"));
+			dispatchEvent(new Event(Event.COMPLETE));
 		}
 		
 		public function get username():String {
