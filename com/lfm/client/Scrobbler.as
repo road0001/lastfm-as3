@@ -4,6 +4,9 @@
 	import com.lfm.model.Track;
 	import com.gsolo.encryption.MD5;
 	import flash.events.Event;
+	import flash.events.StatusEvent;
+	import flash.events.ErrorEvent;
+	import flash.events.IOErrorEvent;
 	import flash.events.EventDispatcher;
 	import flash.net.URLLoader;
     import flash.net.URLRequest;
@@ -19,14 +22,21 @@
 		
 		public function Scrobbler(user:String,pass:String) {
 			lfm_session = new Session(user,pass);
-			lfm_session.addEventListener(Event.COMPLETE,sessionReady);
+			lfm_session.addEventListener(StatusEvent.STATUS, sessionStatus);
+			lfm_session.addEventListener(IOErrorEvent.IO_ERROR, sessionError);
 			lfm_session.create();
 		}
 		
+		public function connect():void {
+			lfm_session.create();
+		}
 		
-		private function sessionReady(evt:Event):void {
-			ready = lfm_session.success;
-			dispatchEvent(new Event(Event.CONNECT));
+		private function sessionStatus(event:StatusEvent):void {
+			if(event.code == "OK") {
+				dispatchEvent(new Event(Event.CONNECT));
+			} else {
+				dispatchEvent(new ErrorEvent(ErrorEvent.ERROR, false, false, lfm_session.reason));
+			}
 			trace("Session acquired. Session Success: "+lfm_session.success);
 		}
 		
@@ -55,6 +65,7 @@
 			lastSubmission = track;
 			
 			loader.addEventListener("complete",submitComplete);
+			loader.addEventListener("ioError",submitError);
 			loader.load(req);
 			
 		}
@@ -82,6 +93,14 @@
 			dispatchEvent(new Event(Event.COMPLETE));
 		}
 		
+		private function submitError(event:IOErrorEvent):void {
+			dispatchEvent(new IOErrorEvent(IOErrorEvent.IO_ERROR,false,false,"There was a problem submitting the track. The webservice may be temporarily down."));
+		}
+		
+		private function sessionError(event:IOErrorEvent):void {
+			trace("error establishing session "+lfm_session.reason);
+			dispatchEvent(new IOErrorEvent(IOErrorEvent.IO_ERROR,false,false,"There was a problem establishing a session. The webservice may be temporarily down."));
+		}
 		
 		
 	}
