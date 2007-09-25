@@ -1,0 +1,33 @@
+#summary User profile-based data service TOC
+#labels Phase-Implementation,userdata
+
+== Introduction ==
+
+The UserData classes contain all the tools needed to retrieve [http://www.audioscrobbler.net/data/webservices/#User%20Profile%20Data all the available data for a specific users profile] on Last.fm.
+
+== Available User Profile Data ==
+
+ * [UserDataProfile Profile Information]
+ * [UserDataTopArtists Top Artists]
+ * [UserDataTopAlbums Top Albums]
+ * [UserDataTopTracks Top Tracks]
+ * [UserDataTopTags Top Tags]
+ * [UserDataTopArtistTags Top Tags for Artist]
+ * [UserDataTopAlbumTags Top Tags for Album]
+ * [UserDataTopTrackTags Top Tags for Track]
+ * [UserDataFriends Friends List]
+ * [UserDataNeighbours Neighbours]
+ * [UserDataRecentTracks Recent Tracks]
+ * [UserDataRecentBannedTracks Recent Banned Tracks]
+ * [UserDataRecentLovedTracks Recent Loved Tracks]
+ * [UserDataRecentJournals Recent Journals]
+ * [UserDataWeeklyChartList Weekly Chart List]
+ * [UserDataWeeklyArtistsChart Weekly Artists Chart]
+ * [UserDataWeeklyAlbumsChart Weekly Albums Chart]
+ * [UserDataWeeklyTracksChart Weekly Tracks Chart]
+ * [UserDataManualRecommendations Manual Recommendations]
+ * [UserDataSystemRecommendations System Recommendations]
+ * [UserDataUserEvents User Events / Friends' Events / System Event Recommendations]
+ * [UserDataTasteOMeter Taste-O-Meter] 
+ 
+ 
