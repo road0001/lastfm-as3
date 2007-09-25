@@ -1,5 +1,5 @@
 #summary User profile-based data service TOC
-#labels Phase-Implementation,userdata
+#labels Phase-Implementation,userdata,Featured
 
 == Introduction ==
 
@@ -29,5 +29,6 @@ The UserData classes contain all the tools needed to retrieve [http://www.audios
  * [UserDataSystemRecommendations System Recommendations]
  * [UserDataUserEvents User Events / Friends' Events / System Event Recommendations]
  * [UserDataTasteOMeter Taste-O-Meter] 
+ 
  
  
