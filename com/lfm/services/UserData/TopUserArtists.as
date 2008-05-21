@@ -1,12 +1,12 @@
-﻿package com.lfm.services.UserData {
+package com.lfm.services.UserData {
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
 	import com.lfm.services.UserData.AbstractUserData;
 	
-	public class TopArtists extends AbstractUserData {
+	public class TopUserArtists extends AbstractUserData {
 
 		
-		public function TopArtists(user:String,type:String="overall") {
+		public function TopUserArtists(user:String,type:String="overall") {
 			super(user);
 			_properties['type'] = type;
 			_properties['artists'] = new Array();
@@ -29,11 +29,7 @@
 				_properties['artists'].push(artist);
 			}
 			
-			dispatchEvent(new Event("complete"));
-		}
-		
-		public function get username():String {
-			return _properties['username'];
+			dispatchEvent(new Event(Event.COMPLETE));
 		}
 		
 		public function get type():String {

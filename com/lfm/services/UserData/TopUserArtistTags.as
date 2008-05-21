@@ -3,10 +3,10 @@
 	import flash.events.EventDispatcher;
 	import com.lfm.services.UserData.AbstractUserData;
 	
-	public class TopArtistTags extends AbstractUserData {
+	public class TopUserArtistTags extends AbstractUserData {
 
 		
-		public function TopArtistTags(user:String,artist:String="") {
+		public function TopUserArtistTags(user:String,artist:String="") {
 			super(user);
 			_properties['artist'] = artist;
 			_properties['tags'] = new Array();
@@ -24,10 +24,6 @@
 			}
 			
 			dispatchEvent(new Event(Event.COMPLETE));
-		}
-		
-		public function get username():String {
-			return _properties['username'];
 		}
 		
 		public function get artist():String {

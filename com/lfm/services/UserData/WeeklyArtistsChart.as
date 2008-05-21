@@ -35,10 +35,6 @@
 			dispatchEvent(new Event(Event.COMPLETE));
 		}
 		
-		public function get username():String {
-			return _properties['username'];
-		}
-		
 		public function get artists():Array {
 			return _properties['artists'];
 		}
