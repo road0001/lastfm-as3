@@ -3,9 +3,9 @@
 	import flash.events.EventDispatcher;
 	import com.lfm.services.UserData.AbstractUserData;
 	
-	public class TopAlbums extends AbstractUserData {
+	public class TopUserAlbums extends AbstractUserData {
 		
-		public function TopAlbums(user:String,type:String="overall") {
+		public function TopUserAlbums(user:String,type:String="overall") {
 			super(user);
 			_properties['type'] = type;
 			_properties['albums'] = new Array();
@@ -31,10 +31,6 @@
 			}
 			
 			dispatchEvent(new Event(Event.COMPLETE));
-		}
-		
-		public function get username():String {
-			return _properties['username'];
 		}
 		
 		public function get type():String {

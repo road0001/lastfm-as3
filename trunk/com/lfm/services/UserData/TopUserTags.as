@@ -3,9 +3,9 @@
 	import flash.events.EventDispatcher;
 	import com.lfm.services.UserData.AbstractUserData;
 	
-	public class TopTags extends AbstractUserData {
+	public class TopUserTags extends AbstractUserData {
 		
-		public function TopTags(user:String) {
+		public function TopUserTags(user:String) {
 			super(user);
 			_properties['tags'] = new Array();
 			BASE_URL += "tags.xml";
@@ -22,10 +22,6 @@
 			}
 			
 			dispatchEvent(new Event(Event.COMPLETE));
-		}
-		
-		public function get username():String {
-			return _properties['username'];
 		}
 		
 		public function get tags():Array {

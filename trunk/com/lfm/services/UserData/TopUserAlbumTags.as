@@ -3,21 +3,22 @@
 	import flash.events.EventDispatcher;
 	import com.lfm.services.UserData.AbstractUserData;
 	
-	public class TopTrackTags extends AbstractUserData {
-
+	public class TopUserAlbumTags extends AbstractUserData {
 		
-		public function TopTrackTags(user:String,artist:String,track:String) {
+		
+		public function TopUserAlbumTags(user:String,artist:String="",album:String="") {
 			super(user);
 			_properties['artist'] = artist;
-			_properties['track'] = track;
+			_properties['album'] = album;
 			_properties['tags'] = new Array();
-			BASE_URL += "tracktags.xml?artist="+artist+"&track="+track;
+			BASE_URL += "albumtags.xml?artist="+artist+"&album="+album;
 		}
 		
 		
 		override protected function parseData(event:Event):void {
+			
 			super.parseData(event);
-			_properties['track'] = _svcXML.@track.toString();
+			_properties['album'] = _svcXML.@album.toString();
 			_properties['artist'] = _svcXML.@artist.toString();
 			
 			for each (var item:XML in _svcXML..tag) {
@@ -26,20 +27,16 @@
 								   'url':item.url };
 				_properties['tags'].push(tag);
 			}
-
+			
 			dispatchEvent(new Event(Event.COMPLETE));
-		}
-		
-		public function get username():String {
-			return _properties['username'];
 		}
 		
 		public function get artist():String {
 			return _properties['artist'];
 		}
 		
-		public function get track():String {
-			return _properties['track'];
+		public function get album():String {
+			return _properties['album'];
 		}
 		
 		public function get tags():Array {

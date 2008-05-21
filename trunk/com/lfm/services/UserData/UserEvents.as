@@ -1,15 +1,17 @@
 ﻿package com.lfm.services.UserData {
-	import flash.events.Event;
-	import flash.events.EventDispatcher;
 	import com.lfm.services.AbstractEventsData;
 	
 	public class UserEvents extends AbstractEventsData {
 		
-		public function UserEvents(user:String,type="personal") {
+		public static const FRIENDS:String = "friends";
+		public static const PERSONAL:String = "personal";
+		public static const RECOMMENDED:String = "recommended";
+		
+		public function UserEvents(user:String, type:String="personal") {
 			super();
-			if(type == "recommended") {
+			if(type == RECOMMENDED) {
 				BASE_URL += "user/" + user + "/eventsysrecs.rss";
-			} else if(type == "friends") {
+			} else if(type == FRIENDS) {
 				BASE_URL += "user/" + user + "/friendevents.rss";
 			} else {
 				BASE_URL += "user/" + user + "/events.rss";

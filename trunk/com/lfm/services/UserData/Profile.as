@@ -48,10 +48,6 @@
 			return _properties['cluster'];
 		}
 		
-		public function get username():String {
-			return _properties['username'];
-		}
-		
 		public function get url():String {
 			return _properties['url'];
 		}

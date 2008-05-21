@@ -13,7 +13,9 @@
 			super.parseData(evt);
 			_properties['username'] = _svcXML.@user.toString();
 		}
-		
+		public function get username():String {
+			return _properties['username'];
+		}
 	}
 	
 }

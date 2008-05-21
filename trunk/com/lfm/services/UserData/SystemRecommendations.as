@@ -27,10 +27,6 @@
 			dispatchEvent(new Event(Event.COMPLETE));
 		}
 		
-		public function get username():String {
-			return _properties['username'];
-		}
-		
 		public function get recommendations():Array {
 			return _properties['recommendations'];
 		}
